@@ -12,5 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^13.8.0"
+  },
+  "devDependencies": {
+    "start-server-and-test": "^2.0.3"
   }
 }
