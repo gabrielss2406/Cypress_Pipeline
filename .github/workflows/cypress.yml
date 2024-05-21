@@ -8,10 +8,10 @@ jobs:
 
     steps:
     - name: Checkout do código do repositório do frontend
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       
     - name: Checkout do código do repositório de testes
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: S204-Inatel-2024-1/Ewel_e_Amigos_Tests_Cypress
         path: cypress_tests  # Define o diretório onde o repositório será clonado
@@ -26,21 +26,21 @@ jobs:
 
     - name: Upload Cypress videos
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: cypress-videos
         path: cypress_tests/cypress/videos
 
     - name: Upload Cypress screenshots
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: cypress-screenshots
         path: cypress_tests/cypress/screenshots
 
     - name: Upload Cypress reports
       if: always()
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: cypress-reports
         path: cypress_tests/cypress/reports
